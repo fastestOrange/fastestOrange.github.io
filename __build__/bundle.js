@@ -68,13 +68,9 @@
 
 	var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
 
-	var _ExampleComponent = __webpack_require__(250);
+	var _Projects = __webpack_require__(250);
 
-	var _ExampleComponent2 = _interopRequireDefault(_ExampleComponent);
-
-	var _ExampleTwoDeepComponent = __webpack_require__(251);
-
-	var _ExampleTwoDeepComponent2 = _interopRequireDefault(_ExampleTwoDeepComponent);
+	var _Projects2 = _interopRequireDefault(_Projects);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -82,11 +78,7 @@
 	  _reactRouter.Route,
 	  { path: '/', mapMenuTitle: 'Home', component: _App2.default },
 	  _react2.default.createElement(_reactRouter.IndexRoute, { component: _Home2.default }),
-	  _react2.default.createElement(
-	    _reactRouter.Route,
-	    { path: 'example', mapMenuTitle: 'Example', component: _ExampleComponent2.default },
-	    _react2.default.createElement(_reactRouter.Route, { path: 'two-deep', mapMenuTitle: 'Two Deep', component: _ExampleTwoDeepComponent2.default })
-	  ),
+	  _react2.default.createElement(_reactRouter.Route, { path: 'projects', mapMenuTitle: 'Projects', component: _Projects2.default }),
 	  _react2.default.createElement(_reactRouter.Route, { path: '*', mapMenuTitle: 'Page Not Found', component: _PageNotFound2.default })
 	);
 
@@ -27818,12 +27810,7 @@
 	    _react2.default.createElement(
 	      'h1',
 	      null,
-	      'Single Page Apps for GitHub Pages'
-	    ),
-	    _react2.default.createElement(
-	      'a',
-	      { href: repoLink },
-	      'https://github.com/rafrex/spa-github-pages'
+	      'BLOG ABOUT THINGS OF A TECHNICAL NATURE'
 	    ),
 	    _react2.default.createElement(
 	      'nav',
@@ -27835,14 +27822,9 @@
 	      'div',
 	      { style: { color: '#A0A0A0', fontSize: '14px', marginTop: '50px' } },
 	      _react2.default.createElement(
-	        'a',
-	        { href: 'http://www.rafaelpedicini.com', className: 'extended-link' },
-	        'Code and concept by ',
-	        _react2.default.createElement(
-	          'span',
-	          { className: 'link-style' },
-	          'Rafael Pedicini'
-	        )
+	        'h2',
+	        null,
+	        'Chris Oliver'
 	      )
 	    )
 	  );
@@ -27871,74 +27853,23 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function Home() {
-	  var reactLink = 'https://github.com/facebook/react';
-	  var reactRouterLink = 'https://github.com/reactjs/react-router';
-	  var ghPagesLink = 'https://pages.github.com/';
-	  var repoReadmeLink = 'https://github.com/rafrex/spa-github-pages#readme';
 
 	  return _react2.default.createElement(
 	    'div',
 	    null,
 	    _react2.default.createElement(
-	      'p',
-	      null,
-	      'This is an example single page app built with ',
-	      _react2.default.createElement(
-	        'a',
-	        { href: reactLink },
-	        'React'
-	      ),
-	      ' and ',
-	      ' ',
-	      _react2.default.createElement(
-	        'a',
-	        { href: reactRouterLink },
-	        'React Router'
-	      ),
-	      ' using ',
-	      ' ',
-	      _react2.default.createElement(
-	        'code',
-	        null,
-	        'browserHistory'
-	      ),
-	      '. Navigate with the links below and refresh the page or copy/paste the url to test out the redirect functionality deployed to overcome ',
-	      ' ',
-	      _react2.default.createElement(
-	        'a',
-	        { href: ghPagesLink },
-	        'GitHub Pages'
-	      ),
-	      ' incompatibility with single page apps (like this one).'
-	    ),
-	    _react2.default.createElement(
-	      'p',
-	      null,
-	      'Please see the ',
-	      _react2.default.createElement(
-	        'a',
-	        { href: repoReadmeLink },
-	        'repo readme'
-	      ),
-	      ' for instructions on how to use this boilerplate to deploy your own single page app using GitHub Pages.'
-	    ),
-	    _react2.default.createElement(
 	      'div',
 	      null,
 	      _react2.default.createElement(
 	        _reactRouter.Link,
-	        { to: '/example' },
-	        'Example page'
+	        { to: '/About' },
+	        'About'
 	      )
 	    ),
 	    _react2.default.createElement(
 	      'div',
 	      null,
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/example/two-deep?field1=foo&field2=bar#boom!' },
-	        'Example two deep with query and hash'
-	      )
+	      _react2.default.createElement(_reactRouter.Link, { to: '/About/projects' })
 	    )
 	  );
 	}
@@ -28007,143 +27938,28 @@
 	  children: _react.PropTypes.element
 	};
 
-	function ExampleComponent(_ref) {
+	function About(_ref) {
 	  var children = _ref.children;
 
 	  return _react2.default.createElement(
 	    'div',
 	    null,
-	    _react2.default.createElement(
-	      'p',
-	      null,
-	      'This is an example page. Refresh the page or copy/paste the url to test out the redirect functionality (this same page should load after the redirect).'
-	    ),
+	    _react2.default.createElement('p', null),
 	    children || _react2.default.createElement(
 	      'div',
 	      null,
 	      _react2.default.createElement(
 	        _reactRouter.Link,
-	        { to: '/example/two-deep?field1=foo&field2=bar#boom!' },
-	        'Example two deep with query and hash'
+	        { to: '/about/project!' },
+	        'Projects'
 	      )
 	    )
 	  );
 	}
 
-	ExampleComponent.propTypes = propTypes;
+	Projects.propTypes = propTypes;
 
-	exports.default = ExampleComponent;
-
-/***/ },
-/* 251 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(175);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var propTypes = {
-	  location: _react.PropTypes.object.isRequired
-	};
-
-	function ExampleTwoDeepComponent(_ref) {
-	  var location = _ref.location;
-
-	  var queryPresent = Object.keys(location.query).length !== 0;
-	  var hashPresent = location.hash !== '';
-
-	  function queryStringTitle() {
-	    if (queryPresent) return 'The query string field-value pairs are:';
-	    return 'No query string in the url';
-	  }
-
-	  function hashFragmentTitle() {
-	    if (hashPresent) return 'The hash fragment is:';
-	    return 'No hash frgament in the url';
-	  }
-
-	  function linkToShowQueryAndOrHash() {
-	    if (queryPresent && hashPresent) return null;
-
-	    var queryString = queryPresent ? location.search : '?field1=foo&field2=bar';
-	    var hashFragment = hashPresent ? location.hash : '#boom!';
-
-	    var linkText = '';
-	    if (queryPresent && !hashPresent) linkText = 'Show with hash fragment';
-	    if (!queryPresent && hashPresent) linkText = 'Show with query string';
-	    if (!queryPresent && !hashPresent) linkText = 'Show with query string and hash fragment';
-
-	    return _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/example/two-deep' + queryString + hashFragment },
-	        linkText
-	      )
-	    );
-	  }
-
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        queryStringTitle()
-	      ),
-	      _react2.default.createElement(
-	        'ul',
-	        null,
-	        Object.keys(location.query).map(function (field, index) {
-	          return _react2.default.createElement(
-	            'li',
-	            { key: index },
-	            field,
-	            ': ',
-	            location.query[field]
-	          );
-	        })
-	      )
-	    ),
-	    _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        'div',
-	        null,
-	        hashFragmentTitle()
-	      ),
-	      _react2.default.createElement(
-	        'ul',
-	        null,
-	        hashPresent ? _react2.default.createElement(
-	          'li',
-	          null,
-	          location.hash.slice(1)
-	        ) : undefined
-	      )
-	    ),
-	    linkToShowQueryAndOrHash()
-	  );
-	}
-
-	ExampleTwoDeepComponent.propTypes = propTypes;
-
-	exports.default = ExampleTwoDeepComponent;
+	exports.default = Projects;
 
 /***/ }
 /******/ ]);

@@ -6,16 +6,14 @@ import 'current-input';
 import App from './components/App';
 import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
-import ExampleComponent from './components/ExampleComponent';
-import ExampleTwoDeepComponent from './components/ExampleTwoDeepComponent';
+import Projects from './components/Projects';
 
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
     <IndexRoute component={Home} />
 
-    <Route path="example" mapMenuTitle="Example" component={ExampleComponent}>
-      <Route path="two-deep" mapMenuTitle="Two Deep" component={ExampleTwoDeepComponent} />
+    <Route path="projects" mapMenuTitle="Projects" component={Projects}>
     </Route>
 
     <Route path="*" mapMenuTitle="Page Not Found" component={PageNotFound} />
