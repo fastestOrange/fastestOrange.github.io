@@ -8,6 +8,8 @@ import Home from './components/Home';
 import PageNotFound from './components/PageNotFound';
 import Projects from './components/Projects';
 
+import bulma from 'bulma/css/bulma.css'
+
 
 const routes = (
   <Route path="/" mapMenuTitle="Home" component={App}>
