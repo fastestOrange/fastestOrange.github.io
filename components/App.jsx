@@ -29,16 +29,14 @@ function App({ children, routes }) {
     );
   }
 
-  const repoLink = 'https://github.com/rafrex/spa-github-pages';
-
   return (
-    <div>
+    <div classname={content}>
       <h1>BLOG ABOUT THINGS OF A TECHNICAL NATURE</h1>
       <nav>
         {generateMapMenu()}
       </nav>
       {children}
-      <div style={{ color: '#A0A0A0', fontSize: '14px', marginTop: '50px' }}>
+      <div>
         <h2>Chris Oliver</h2>
       </div>
     </div>

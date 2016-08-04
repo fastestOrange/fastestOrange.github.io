@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 function Home() {
 
   return (
-    <div>
+    <div classname={box}>
       <div>
         <Link to="/About">About</Link>
       </div>
