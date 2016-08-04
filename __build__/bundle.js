@@ -27938,7 +27938,7 @@
 	  children: _react.PropTypes.element
 	};
 
-	function About(_ref) {
+	function Projects(_ref) {
 	  var children = _ref.children;
 
 	  return _react2.default.createElement(

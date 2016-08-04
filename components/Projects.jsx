@@ -5,7 +5,7 @@ const propTypes = {
   children: PropTypes.element,
 };
 
-function About({ children }) {
+function Projects({ children }) {
   return (
     <div>
       <p>
