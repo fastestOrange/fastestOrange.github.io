@@ -64,17 +64,13 @@
 
 	var _Home2 = _interopRequireDefault(_Home);
 
-	var _PageNotFound = __webpack_require__(249);
+	var _PageNotFound = __webpack_require__(254);
 
 	var _PageNotFound2 = _interopRequireDefault(_PageNotFound);
 
-	var _Projects = __webpack_require__(250);
+	var _Projects = __webpack_require__(255);
 
 	var _Projects2 = _interopRequireDefault(_Projects);
-
-	var _bulma = __webpack_require__(251);
-
-	var _bulma2 = _interopRequireDefault(_bulma);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -27808,7 +27804,7 @@
 
 	  return _react2.default.createElement(
 	    'div',
-	    { classname: content },
+	    { className: 'content' },
 	    _react2.default.createElement(
 	      'h1',
 	      null,
@@ -27852,13 +27848,25 @@
 
 	var _reactRouter = __webpack_require__(175);
 
+	var _bind = __webpack_require__(249);
+
+	var _bind2 = _interopRequireDefault(_bind);
+
+	var _bulma = __webpack_require__(250);
+
+	var _bulma2 = _interopRequireDefault(_bulma);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var cx = _bind2.default.bind(_bulma2.default);
 
 	function Home() {
 
+	  var content = cx({ 'content': true });
+
 	  return _react2.default.createElement(
 	    'div',
-	    { classname: box },
+	    { className: content },
 	    _react2.default.createElement(
 	      'div',
 	      null,
@@ -27882,98 +27890,67 @@
 /* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
+	var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
+	  Copyright (c) 2016 Jed Watson.
+	  Licensed under the MIT License (MIT), see
+	  http://jedwatson.github.io/classnames
+	*/
+	/* global define */
 
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
+	(function () {
+		'use strict';
 
-	var _react = __webpack_require__(1);
+		var hasOwn = {}.hasOwnProperty;
 
-	var _react2 = _interopRequireDefault(_react);
+		function classNames () {
+			var classes = [];
 
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+			for (var i = 0; i < arguments.length; i++) {
+				var arg = arguments[i];
+				if (!arg) continue;
 
-	var propTypes = {
-	  location: _react.PropTypes.object.isRequired
-	};
+				var argType = typeof arg;
 
-	function PageNotFound(_ref) {
-	  var location = _ref.location;
+				if (argType === 'string' || argType === 'number') {
+					classes.push(this && this[arg] || arg);
+				} else if (Array.isArray(arg)) {
+					classes.push(classNames.apply(this, arg));
+				} else if (argType === 'object') {
+					for (var key in arg) {
+						if (hasOwn.call(arg, key) && arg[key]) {
+							classes.push(this && this[key] || key);
+						}
+					}
+				}
+			}
 
-	  return _react2.default.createElement(
-	    'p',
-	    null,
-	    'Page not found - the path, ',
-	    _react2.default.createElement(
-	      'code',
-	      null,
-	      location.pathname
-	    ),
-	    ', did not match any React Router routes.'
-	  );
-	}
+			return classes.join(' ');
+		}
 
-	PageNotFound.propTypes = propTypes;
+		if (typeof module !== 'undefined' && module.exports) {
+			module.exports = classNames;
+		} else if (true) {
+			// register as 'classnames', consistent with npm package name
+			!(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+				return classNames;
+			}.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+		} else {
+			window.classNames = classNames;
+		}
+	}());
 
-	exports.default = PageNotFound;
 
 /***/ },
 /* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactRouter = __webpack_require__(175);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	var propTypes = {
-	  children: _react.PropTypes.element
-	};
-
-	function Projects(_ref) {
-	  var children = _ref.children;
-
-	  return _react2.default.createElement(
-	    'div',
-	    null,
-	    _react2.default.createElement('p', null),
-	    children || _react2.default.createElement(
-	      'div',
-	      null,
-	      _react2.default.createElement(
-	        _reactRouter.Link,
-	        { to: '/about/project!' },
-	        'Projects'
-	      )
-	    )
-	  );
-	}
-
-	Projects.propTypes = propTypes;
-
-	exports.default = Projects;
-
-/***/ },
-/* 251 */
-/***/ function(module, exports, __webpack_require__) {
-
 	// style-loader: Adds some css to the DOM by adding a <style> tag
 
 	// load the styles
-	var content = __webpack_require__(252);
+	var content = __webpack_require__(251);
 	if(typeof content === 'string') content = [[module.id, content, '']];
 	// add the styles to the DOM
-	var update = __webpack_require__(254)(content, {});
+	var update = __webpack_require__(253)(content, {});
 	if(content.locals) module.exports = content.locals;
 	// Hot Module Replacement
 	if(false) {
@@ -27990,10 +27967,10 @@
 	}
 
 /***/ },
-/* 252 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
-	exports = module.exports = __webpack_require__(253)();
+	exports = module.exports = __webpack_require__(252)();
 	// imports
 
 
@@ -28004,7 +27981,7 @@
 
 
 /***/ },
-/* 253 */
+/* 252 */
 /***/ function(module, exports) {
 
 	/*
@@ -28060,7 +28037,7 @@
 
 
 /***/ },
-/* 254 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/*
@@ -28310,6 +28287,105 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 254 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var propTypes = {
+	  location: _react.PropTypes.object.isRequired
+	};
+
+	function PageNotFound(_ref) {
+	  var location = _ref.location;
+
+	  return _react2.default.createElement(
+	    'p',
+	    null,
+	    'Page not found - the path, ',
+	    _react2.default.createElement(
+	      'code',
+	      null,
+	      location.pathname
+	    ),
+	    ', did not match any React Router routes.'
+	  );
+	}
+
+	PageNotFound.propTypes = propTypes;
+
+	exports.default = PageNotFound;
+
+/***/ },
+/* 255 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouter = __webpack_require__(175);
+
+	var _bind = __webpack_require__(249);
+
+	var _bind2 = _interopRequireDefault(_bind);
+
+	var _bulma = __webpack_require__(250);
+
+	var _bulma2 = _interopRequireDefault(_bulma);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var cx = _bind2.default.bind(_bulma2.default);
+
+	var propTypes = {
+	  children: _react.PropTypes.element
+	};
+
+	function Projects(_ref) {
+	  var children = _ref.children;
+
+
+	  var className = cx({
+	    'box': true
+	  });
+	  return _react2.default.createElement(
+	    'div',
+	    { className: className },
+	    _react2.default.createElement('p', null),
+	    children || _react2.default.createElement(
+	      'div',
+	      null,
+	      _react2.default.createElement(
+	        _reactRouter.Link,
+	        { to: '/about/project!' },
+	        'Projects'
+	      )
+	    )
+	  );
+	}
+
+	Projects.propTypes = propTypes;
+
+	exports.default = Projects;
 
 /***/ }
 /******/ ]);

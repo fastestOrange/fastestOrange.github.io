@@ -30,7 +30,7 @@ function App({ children, routes }) {
   }
 
   return (
-    <div classname={content}>
+    <div className={'content'}>
       <h1>BLOG ABOUT THINGS OF A TECHNICAL NATURE</h1>
       <nav>
         {generateMapMenu()}
